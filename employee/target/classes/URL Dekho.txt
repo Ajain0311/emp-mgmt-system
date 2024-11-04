@@ -1,0 +1,94 @@
+Department API Endpoints
+POST (Create a Department)
+
+URL: http://localhost:8080/api/departments/save
+Method: POST
+Request Body Example:
+json
+Copy code
+{
+  "name": "Engineering",
+  "role": "Development",
+  "location": "San Francisco"
+}
+GET (Retrieve All Departments)
+
+URL: http://localhost:8080/api/departments/get
+Method: GET
+GET (Retrieve a Single Department by ID)
+
+URL: http://localhost:8080/api/departments/{id}
+Method: GET
+Example: http://localhost:8080/api/departments/1
+PUT (Update a Department)
+
+URL: http://localhost:8080/api/departments/update/{id}
+Method: PUT
+Example: http://localhost:8080/api/departments/update/1
+Request Body Example (to update a department):
+json
+Copy code
+{
+  "name": "Updated Department Name",
+  "role": "Updated Role",
+  "location": "Updated Location"
+}
+DELETE (Delete a Department by ID)
+
+URL: http://localhost:8080/api/departments/delete/{id}
+Method: DELETE
+Example: http://localhost:8080/api/departments/delete/1
+Employee API Endpoints
+POST (Create an Employee)
+
+URL: http://localhost:8080/api/employees/save
+Method: POST
+Request Body Example:
+json
+Copy code
+{
+  "fname": "John",
+  "lname": "Doe",
+  "mobnum": "1234567890",
+  "altnum": "0987654321",
+  "mail": "john.doe@example.com",
+  "salary": 50000,
+  "doj": "2023-10-15",
+  "department": {
+    "id": 1
+  }
+}
+GET (Retrieve All Employees)
+
+URL: http://localhost:8080/api/employees/get
+Method: GET
+GET (Retrieve a Single Employee by ID)
+
+URL: http://localhost:8080/api/employees/{id}
+Method: GET
+Example: http://localhost:8080/api/employees/1
+PUT (Update an Employee)
+
+URL: http://localhost:8080/api/employees/update/{id}
+Method: PUT
+Example: http://localhost:8080/api/employees/update/1
+Request Body Example (to update an employee):
+json
+Copy code
+{
+  "fname": "Jane",
+  "lname": "Doe",
+  "mobnum": "1234567890",
+  "altnum": "0987654321",
+  "mail": "jane.doe@example.com",
+  "salary": 60000,
+  "doj": "2023-10-15",
+  "department": {
+    "id": 2
+  }
+}
+DELETE (Delete an Employee by ID)
+
+URL: http://localhost:8080/api/employees/delete/{id}
+Method: DELETE
+Example: http://localhost:8080/api/employees/delete/1

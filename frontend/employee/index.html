@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Employees</h1>
+    <div class="controls-row">
+      <button id="add-employee-btn">Add Employee</button>
+      <button onclick="window.location.href='../department/index.html'">
+        Departments
+      </button>
+      <input type="text" id="search" placeholder="Search employees..." />
+      <label for="rows-per-page">Rows per page:</label>
+      <select id="rows-per-page">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+      </select>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th data-column="id">ID</th>
+          <th data-column="fname">First Name</th>
+          <th data-column="lname">Last Name</th>
+          <th data-column="mobnum">Mobile Number</th>
+          <th data-column="altnum">Alternative Number</th>
+          <th data-column="mail">Email</th>
+          <th data-column="salary">Salary</th>
+          <th data-column="doj">Date of Joining</th>
+          <th data-column="departmentName">Department</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="employee-table-body"></tbody>
+    </table>
+
+    <div id="pagination" class="pagination-controls"></div>
+
+    <div id="employeeModal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close-button">&times;</span>
+        <h2 id="modal-title">Add/Edit Employee</h2>
+        <form id="employee-form">
+          <input type="hidden" id="employee-id" />
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" required />
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" required />
+          <label for="mobnum">Mobile Number:</label>
+          <input type="text" id="mobnum" required />
+          <label for="altnum">Alternative Number:</label>
+          <input type="text" id="altnum" />
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" required />
+          <label for="salary">Salary:</label>
+          <input type="number" id="salary" required />
+          <label for="doj">Date of Joining:</label>
+          <input type="date" id="doj" required />
+          <label for="department-name">Department:</label>
+          <select id="department-name" required>
+            <option value="" disabled selected>Select a department</option>
+          </select>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

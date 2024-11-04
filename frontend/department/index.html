@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="../employee/index.html">Employees</a>
+        <a href="#" id="add-department-link">Add Department</a>
+        <a href="#reports">Reports</a>
+        <a href="#settings">Settings</a>
+        <a href="#logout">Logout</a>
+    </div>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Location</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="department-table-body">
+        </tbody>
+    </table>
+    
+    <!-- Modal for Adding/Editing Departments -->
+    <div id="department-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-button">&times;</span>
+            <h2 id="modal-title">Add Department</h2>
+            <form id="department-form">
+                <label for="dept-name">Name:</label>
+                <input type="text" id="dept-name" name="dept-name" required>
+                
+                <label for="dept-role">Role:</label>
+                <input type="text" id="dept-role" name="dept-role" required>
+                
+                <label for="dept-location">Location:</label>
+                <input type="text" id="dept-location" name="dept-location" required>
+                
+                <button type="submit">Save Department</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
